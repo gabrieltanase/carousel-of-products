@@ -63,9 +63,9 @@ fetch('./products.json')
           <div class="product-price-cart">
               <span class="price">
                 <span class="total ${discounted_price ? 'with-discount' : ''}">
-                ${original_price}&#8364;
+                ${Number(original_price).toFixed(2)} &#8364;
                 </span>${discounted_price
-                  ? `<span class="discount">${discounted_price}&#8364;</span>`
+                  ? `<span class="discount">${Number(discounted_price).toFixed(2)}&#8364;</span>`
                   : ''}
                 </span>
               <button>
