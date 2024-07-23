@@ -66,14 +66,6 @@
         color: #FF3A68;
         font-size: 2rem;
       }
-
-      .total,
-      .discount {
-
-        &:after {
-          content: '€'
-        }
-      }
     }
 
     button {

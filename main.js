@@ -47,24 +47,25 @@ fetch('./products.json')
   .then(res => res.json())
   .then((products) => {
     products.forEach(product => {
+      const { link, name, image, original_price, discounted_price } = product;
       const slide = document.createElement('swiper-slide')
       slide.className = 'swiper-slide'
       slide.innerHTML = `
       <div class="product">
         <div class="product-image">
-          <img src="${product.image}" alt="${product.name}">
+          <img src="${image}" alt="${name}">
         </div>
         <div class="product-description">
           <div class="product-favorite">
               <span class="material-symbols-outlined">favorite</span>
           </div>
-          <h3><a href="${product.link}">${product.name}</a></h3>
+          <h3><a href="${link}">${name}</a></h3>
           <div class="product-price-cart">
               <span class="price">
-                <span class="total ${product.discounted_price ? 'with-discount' : ''}">
-                ${product.original_price}
-                </span>${product.discounted_price
-                  ? `<span class="discount">${product.discounted_price}</span>`
+                <span class="total ${discounted_price ? 'with-discount' : ''}">
+                ${original_price}&#8364;
+                </span>${discounted_price
+                  ? `<span class="discount">${discounted_price}&#8364;</span>`
                   : ''}
                 </span>
               <button>
