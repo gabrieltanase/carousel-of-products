@@ -1,3 +1,11 @@
+$pale-red: #FF3A68;
+$black: #231F20;
+$gray: #635C5E;
+$white: #FFFFFF;
+$border-color: #EBEBEB;
+$border-card: 1px solid $border-color;
+$yellow: #FDD302;
+
 .swiper-container {
   width: 100%;
   padding: 3rem;
@@ -6,12 +14,12 @@
 .product {
   display: flex;
   flex-direction: row;
-  border: 1px solid #EBEBEB;
+  border: $border-card;
   border-radius: 10px;
 
   a {
     text-decoration: none;
-    color: black;
+    color: $black;
   }
 
   h3 {
@@ -58,23 +66,23 @@
         &.with-discount {
           font-size: 1rem;
           text-decoration: line-through;
-          text-decoration-color: #FF3A68;
+          text-decoration-color: $pale-red;
         }
       }
 
       .discount {
-        color: #FF3A68;
+        color: $pale-red;
         font-size: 2rem;
       }
     }
 
     button {
-      background: #231F20;
+      background-color: $black;
       padding: 10px 0;
       height: 48px;
       width: calc(100% - 80px);
-      border: solid 1px #231F20;
-      color: #fff;
+      border: 1px solid $black;
+      color: $white;
       border-radius: 5px;
       margin: 3rem auto;
       display: flex;
@@ -90,15 +98,15 @@
       }
 
       &:hover {
-        background: #635C5E;
-        border-color: #635C5E;
+        background-color: $gray;
+        border-color: $gray;
       }
     }
   }
 
   .product-price-cart {
     width: 100%;
-    border-top: 1px solid #EBEBEB;
+    border-top: 1px solid $border-color;
     padding-top: 10px;
     display: flex;
     flex-direction: column;
@@ -113,7 +121,7 @@
     bottom: 0;
     left: 0;
     height: 3px;
-    background: #FDD302;
+    background: $yellow;
     transition: all 0.3s ease-in-out;
   }
 
